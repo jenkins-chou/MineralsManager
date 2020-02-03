@@ -1,19 +1,21 @@
 /*
-Navicat MySQL Data Transfer
+ Navicat Premium Data Transfer
 
-Source Server         : root
-Source Server Version : 50728
-Source Host           : localhost:3306
-Source Database       : minerals_manager
+ Source Server         : administrator
+ Source Server Type    : MySQL
+ Source Server Version : 50727
+ Source Host           : localhost:3306
+ Source Schema         : minerals_manager
 
-Target Server Type    : MYSQL
-Target Server Version : 50728
-File Encoding         : 65001
+ Target Server Type    : MySQL
+ Target Server Version : 50727
+ File Encoding         : 65001
 
-Date: 2019-12-05 23:20:05
+ Date: 03/02/2020 18:51:06
 */
 
-SET FOREIGN_KEY_CHECKS=0;
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
 -- Table structure for base_enterprise
@@ -32,10 +34,6 @@ CREATE TABLE `base_enterprise` (
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of base_enterprise
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for base_menu
@@ -60,22 +58,24 @@ CREATE TABLE `base_menu` (
 -- ----------------------------
 -- Records of base_menu
 -- ----------------------------
-INSERT INTO `base_menu` VALUES ('1', '系统设置', '1', '0', null, '', '999', '', '4', '', '', 'delete');
-INSERT INTO `base_menu` VALUES ('2', '菜单设置', '2', '1', null, '../pages/manager/system/menu.html', '1', '', '4', '', '', 'delete');
-INSERT INTO `base_menu` VALUES ('103', '行政管理', '1', '1', null, null, '1', null, '4', null, null, 'normal');
-INSERT INTO `base_menu` VALUES ('104', '矿产管理', '1', '1', null, null, '1', null, '4', null, null, 'normal');
-INSERT INTO `base_menu` VALUES ('105', '开发商管理', '1', '1', null, null, '1', null, '4', null, null, 'normal');
-INSERT INTO `base_menu` VALUES ('106', '订单管理', '1', '1', null, null, '1', null, '4', null, null, 'normal');
-INSERT INTO `base_menu` VALUES ('107', '数据统计', '1', '1', null, null, '1', null, '4', null, null, 'normal');
-INSERT INTO `base_menu` VALUES ('108', '员工管理', '1', '103', null, null, '1', null, '4', null, null, 'delete');
-INSERT INTO `base_menu` VALUES ('109', '员工管理', '2', '103', null, '../pages/manager/staff/list.html', '1', null, '4', null, null, 'normal');
-INSERT INTO `base_menu` VALUES ('110', '载具管理', '2', '103', null, '../pages/manager/transport/list.html', '1', null, '4', null, null, 'normal');
-INSERT INTO `base_menu` VALUES ('111', '矿区管理', '2', '104', null, '../pages/manager/ore_area/list.html', '1', null, '4', null, null, 'normal');
-INSERT INTO `base_menu` VALUES ('112', '运输管理', '2', '104', null, '../pages/manager/transaction_record/list.html', '1', null, '4', null, null, 'normal');
-INSERT INTO `base_menu` VALUES ('113', '开采管理', '2', '104', null, '../pages/manager/ore_exploit_record/list.html', '1', null, '4', null, null, 'normal');
-INSERT INTO `base_menu` VALUES ('114', '开发商列表', '2', '105', null, '../pages/manager/ore_develop/list.html', '1', null, '4', null, null, 'normal');
-INSERT INTO `base_menu` VALUES ('116', '订单列表', '2', '106', null, '../pages/manager/base_orde/list.html', '1', null, '4', null, null, 'normal');
-INSERT INTO `base_menu` VALUES ('117', '图表统计', '2', '107', null, '../pages/manager/statistics/index.html', '1', null, '4', null, null, 'normal');
+BEGIN;
+INSERT INTO `base_menu` VALUES (1, '系统设置', '1', '0', NULL, '', 999, '', '4', '', '', 'delete');
+INSERT INTO `base_menu` VALUES (2, '菜单设置', '2', '1', NULL, '../pages/manager/system/menu.html', 1, '', '4', '', '', 'delete');
+INSERT INTO `base_menu` VALUES (103, '行政管理', '1', '1', NULL, NULL, 1, NULL, '4', NULL, NULL, 'normal');
+INSERT INTO `base_menu` VALUES (104, '矿产管理', '1', '1', NULL, NULL, 1, NULL, '4', NULL, NULL, 'normal');
+INSERT INTO `base_menu` VALUES (105, '开发商管理', '1', '1', NULL, NULL, 1, NULL, '4', NULL, NULL, 'normal');
+INSERT INTO `base_menu` VALUES (106, '订单管理', '1', '1', NULL, NULL, 1, NULL, '4', NULL, NULL, 'normal');
+INSERT INTO `base_menu` VALUES (107, '数据统计', '1', '1', NULL, NULL, 1, NULL, '4', NULL, NULL, 'normal');
+INSERT INTO `base_menu` VALUES (108, '员工管理', '1', '103', NULL, NULL, 1, NULL, '4', NULL, NULL, 'delete');
+INSERT INTO `base_menu` VALUES (109, '员工管理', '2', '103', NULL, '../pages/manager/staff/list.html', 1, NULL, '4', NULL, NULL, 'normal');
+INSERT INTO `base_menu` VALUES (110, '载具管理', '2', '103', NULL, '../pages/manager/transport/list.html', 1, NULL, '4', NULL, NULL, 'normal');
+INSERT INTO `base_menu` VALUES (111, '矿区管理', '2', '104', NULL, '../pages/manager/ore_area/list.html', 1, NULL, '4', NULL, NULL, 'normal');
+INSERT INTO `base_menu` VALUES (112, '运输管理', '2', '104', NULL, '../pages/manager/transaction_record/list.html', 1, NULL, '4', NULL, NULL, 'normal');
+INSERT INTO `base_menu` VALUES (113, '开采管理', '2', '104', NULL, '../pages/manager/ore_exploit_record/list.html', 1, NULL, '4', NULL, NULL, 'normal');
+INSERT INTO `base_menu` VALUES (114, '开发商列表', '2', '105', NULL, '../pages/manager/ore_develop/list.html', 1, NULL, '4', NULL, NULL, 'normal');
+INSERT INTO `base_menu` VALUES (116, '订单列表', '2', '106', NULL, '../pages/manager/base_order/list.html', 1, NULL, '4', NULL, NULL, 'normal');
+INSERT INTO `base_menu` VALUES (117, '图表统计', '2', '107', NULL, '../pages/manager/statistics/index.html', 1, NULL, '4', NULL, NULL, 'normal');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for base_message
@@ -96,10 +96,6 @@ CREATE TABLE `base_message` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
--- Records of base_message
--- ----------------------------
-
--- ----------------------------
 -- Table structure for base_module
 -- ----------------------------
 DROP TABLE IF EXISTS `base_module`;
@@ -117,11 +113,13 @@ CREATE TABLE `base_module` (
 -- ----------------------------
 -- Records of base_module
 -- ----------------------------
-INSERT INTO `base_module` VALUES ('1', null, 'module1', null, '1573224661', null, 'normal');
-INSERT INTO `base_module` VALUES ('2', null, null, null, '1573401476', null, 'normal');
-INSERT INTO `base_module` VALUES ('3', null, null, null, '1573401482', null, 'normal');
-INSERT INTO `base_module` VALUES ('4', null, null, null, '1573401496', null, 'normal');
-INSERT INTO `base_module` VALUES ('5', null, null, null, '1573401513', null, 'normal');
+BEGIN;
+INSERT INTO `base_module` VALUES (1, NULL, 'module1', NULL, '1573224661', NULL, 'normal');
+INSERT INTO `base_module` VALUES (2, NULL, NULL, NULL, '1573401476', NULL, 'normal');
+INSERT INTO `base_module` VALUES (3, NULL, NULL, NULL, '1573401482', NULL, 'normal');
+INSERT INTO `base_module` VALUES (4, NULL, NULL, NULL, '1573401496', NULL, 'normal');
+INSERT INTO `base_module` VALUES (5, NULL, NULL, NULL, '1573401513', NULL, 'normal');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for base_order
@@ -129,22 +127,25 @@ INSERT INTO `base_module` VALUES ('5', null, null, null, '1573401513', null, 'no
 DROP TABLE IF EXISTS `base_order`;
 CREATE TABLE `base_order` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `party_a` varchar(255) DEFAULT NULL,
-  `party_b` varchar(255) DEFAULT NULL,
-  `order_ore_id` varchar(255) DEFAULT NULL,
+  `party_a` varchar(255) DEFAULT NULL COMMENT '甲方',
+  `party_b` varchar(255) DEFAULT NULL COMMENT '乙方',
+  `order_ore_id` varchar(255) DEFAULT NULL COMMENT '矿区id',
   `capacity` varchar(255) DEFAULT NULL COMMENT '订单矿产容量',
-  `unit_price` varchar(255) DEFAULT NULL,
-  `total_price` varchar(255) DEFAULT NULL,
+  `unit_price` varchar(255) DEFAULT NULL COMMENT '单价',
+  `total_price` varchar(255) DEFAULT NULL COMMENT '总价',
   `deal_time` varchar(255) DEFAULT NULL COMMENT '成交时间',
   `create_time` varchar(255) DEFAULT NULL,
   `remark` varchar(255) DEFAULT NULL,
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of base_order
 -- ----------------------------
+BEGIN;
+INSERT INTO `base_order` VALUES (1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1580726457', NULL, 'delete');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for base_state
@@ -163,10 +164,6 @@ CREATE TABLE `base_state` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of base_state
--- ----------------------------
-
--- ----------------------------
 -- Table structure for base_type
 -- ----------------------------
 DROP TABLE IF EXISTS `base_type`;
@@ -181,10 +178,6 @@ CREATE TABLE `base_type` (
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of base_type
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for base_user
@@ -212,16 +205,19 @@ CREATE TABLE `base_user` (
   `remark` varchar(255) DEFAULT NULL COMMENT '备注',
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of base_user
 -- ----------------------------
-INSERT INTO `base_user` VALUES ('7', '456', '456', null, null, null, null, null, null, null, null, null, null, '2', '教师', null, null, '1572004895', null, 'delete');
-INSERT INTO `base_user` VALUES ('8', 'admin', 'admin', '系统管理员', '134126', 'email', '联系地址', 'wchat', 'qq', '26', '', 'hello', '地区', '4', '系统管理员', null, null, null, null, 'normal');
-INSERT INTO `base_user` VALUES ('9', '123', '123', '周先生', '电话', 'email', '地址', '13413739238923', 'qq号', '21', null, '签名', '广东', '1', '学生', null, null, '1572147442', null, 'delete');
-INSERT INTO `base_user` VALUES ('12', '789', '789', null, null, null, null, null, null, null, null, null, null, '1', '学生', null, null, '1572150642', null, 'delete');
-INSERT INTO `base_user` VALUES ('13', '123', '123', null, null, null, null, null, null, null, null, null, null, '1', 'ѧ��', null, null, '1575559080', null, 'normal');
+BEGIN;
+INSERT INTO `base_user` VALUES (7, '456', '456', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2', '教师', NULL, NULL, '1572004895', NULL, 'delete');
+INSERT INTO `base_user` VALUES (8, 'admin', 'admin', '系统管理员', '134126', 'email000', '联系地址', 'wchat', 'qq', '26', '', 'hello', '地区', '4', '系统管理员', NULL, NULL, NULL, NULL, 'normal');
+INSERT INTO `base_user` VALUES (9, '123', '123', '周先生', '电话', 'email', '地址', '13413739238923', 'qq号', '21', NULL, '签名', '广东', '1', '学生', NULL, NULL, '1572147442', NULL, 'delete');
+INSERT INTO `base_user` VALUES (12, '789', '789', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '学生', NULL, NULL, '1572150642', NULL, 'delete');
+INSERT INTO `base_user` VALUES (13, '123', '123', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', 'ѧ��', NULL, NULL, '1575559080', NULL, 'normal');
+INSERT INTO `base_user` VALUES (14, 'user1', 'user1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', 'ѧ��', NULL, NULL, '1577798598', NULL, 'normal');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for base_user_type
@@ -241,10 +237,12 @@ CREATE TABLE `base_user_type` (
 -- ----------------------------
 -- Records of base_user_type
 -- ----------------------------
-INSERT INTO `base_user_type` VALUES ('1', '1', null, '学生', null, null, 'delete');
-INSERT INTO `base_user_type` VALUES ('2', '2', null, '教师', null, null, 'normal');
-INSERT INTO `base_user_type` VALUES ('3', '3', null, '管理员', null, null, 'delete');
-INSERT INTO `base_user_type` VALUES ('4', '4', null, '管理员', null, null, 'normal');
+BEGIN;
+INSERT INTO `base_user_type` VALUES (1, '1', NULL, '学生', NULL, NULL, 'delete');
+INSERT INTO `base_user_type` VALUES (2, '2', NULL, '教师', NULL, NULL, 'normal');
+INSERT INTO `base_user_type` VALUES (3, '3', NULL, '管理员', NULL, NULL, 'delete');
+INSERT INTO `base_user_type` VALUES (4, '4', NULL, '管理员', NULL, NULL, 'normal');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for ore_area
@@ -263,10 +261,6 @@ CREATE TABLE `ore_area` (
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of ore_area
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for ore_develop
@@ -289,10 +283,6 @@ CREATE TABLE `ore_develop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of ore_develop
--- ----------------------------
-
--- ----------------------------
 -- Table structure for ore_exploit_record
 -- ----------------------------
 DROP TABLE IF EXISTS `ore_exploit_record`;
@@ -310,10 +300,6 @@ CREATE TABLE `ore_exploit_record` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of ore_exploit_record
--- ----------------------------
-
--- ----------------------------
 -- Table structure for staff
 -- ----------------------------
 DROP TABLE IF EXISTS `staff`;
@@ -328,13 +314,16 @@ CREATE TABLE `staff` (
   `remark` varchar(255) DEFAULT NULL COMMENT '备注',
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of staff
 -- ----------------------------
-INSERT INTO `staff` VALUES ('1', null, null, null, null, null, '1575558417', null, 'delete');
-INSERT INTO `staff` VALUES ('2', 'asdsa', 'dsadsa', 'fadsfd', null, null, '1575559097', null, 'normal');
+BEGIN;
+INSERT INTO `staff` VALUES (1, NULL, NULL, NULL, NULL, NULL, '1575558417', NULL, 'delete');
+INSERT INTO `staff` VALUES (2, 'asdsa', 'dsadsa', 'fadsfd', NULL, NULL, '1575559097', NULL, 'normal');
+INSERT INTO `staff` VALUES (3, '11', '2019-12-22', '123', NULL, NULL, '1577798646', NULL, 'delete');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for transaction_record
@@ -353,10 +342,6 @@ CREATE TABLE `transaction_record` (
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of transaction_record
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for transport
@@ -378,6 +363,4 @@ CREATE TABLE `transport` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of transport
--- ----------------------------
+SET FOREIGN_KEY_CHECKS = 1;

@@ -17,7 +17,7 @@ import com.demo.utils.DatabaseUtil;
 @CrossOrigin
 public class OrderController  extends Controller {
 	
-	public static final String DB_TABLE = "order";
+	public static final String DB_TABLE = "base_order";
 	
 	public static final Map<String,String> tableFilter = new HashMap();
 	

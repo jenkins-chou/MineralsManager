@@ -23,6 +23,7 @@ import com.demo.controller.OreAreaController;
 import com.demo.controller.OreDevelopController;
 import com.demo.controller.OreExploitRecordController;
 import com.demo.controller.StaffController;
+import com.demo.controller.StatisticsController;
 import com.demo.controller.TransactionRecordController;
 import com.demo.controller.TransportController;
 import com.demo.controller.UploadController;
@@ -99,6 +100,7 @@ public class SystemConfig extends JFinalConfig {
 	public void configRoute(Routes me) {
 		me.add("/", IndexController.class);	
 		me.add("/upload", UploadController.class);
+		me.add("statistics",StatisticsController.class);
 		
 		me.add("base_enterprise",BaseEnterpriseController.class);
 		me.add("base_menu",BaseMenuController.class);
